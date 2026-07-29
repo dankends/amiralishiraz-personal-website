@@ -1,6 +1,6 @@
 # Amirali D Shiraz — Data Engineering Portfolio
 
-Personal portfolio for Amirali D Shiraz, a Data Engineer based in Toronto. The
+My personal portfolio, a Data Engineer based in Toronto. The
 site presents selected data platforms, professional experience, technical
 skills, education, and credentials through interactive technical storytelling.
 
