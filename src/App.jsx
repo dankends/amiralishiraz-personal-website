@@ -442,7 +442,7 @@ function Projects() {
                   <span>{project.year}</span>
                   <strong>{project.title}</strong>
                   <small>{project.category}</small>
-                  <span aria-hidden="true">—</span>
+                  <span aria-hidden="true">·</span>
                 </div>
               ),
             )}
@@ -463,7 +463,7 @@ function SkillEcosystem() {
         <SectionHeading
           eyebrow="Technical ecosystem"
           title="Tools organized by responsibility, not popularity."
-          body="A production data platform is a connected system. Explore the layers I work across—from ingestion and transformation to governance, analytics, and ML support."
+          body="A production data platform is a connected system. Explore how I work across ingestion, transformation, governance, analytics, and ML support."
         />
         <div className="skills-layout">
           <div className="skill-tabs" role="tablist" aria-label="Technical skill categories">

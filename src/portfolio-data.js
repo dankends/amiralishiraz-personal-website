@@ -20,19 +20,19 @@ export const portfolio = {
   ],
   story: [
     {
-      period: "2016 — 2021",
+      period: "2016 to 2021",
       title: "Understanding the signals",
       body: "Electrical engineering built my foundation in control systems, telemetry, signal processing, and the physical systems that generate operational data.",
       tags: ["Signals", "Control systems", "MATLAB", "Telemetry"],
     },
     {
-      period: "2021 — 2024",
+      period: "2021 to 2024",
       title: "Learning at sensor scale",
       body: "At Polytechnique Montréal, I processed telemetry from more than 140,000 electric water heaters and shaped raw electrical signals into validated, analysis-ready time series.",
       tags: ["140K+ sensors", "Python", "SQL", "Spark", "Time series"],
     },
     {
-      period: "2024 — Present",
+      period: "2024 to Present",
       title: "Building production pipelines",
       body: "At Bright Bee Technology, I build ETL/ELT systems across APIs, JSON, spreadsheets, and operational databases with Python, PySpark, Databricks, and AWS.",
       tags: ["ETL/ELT", "Databricks", "AWS", "Data quality"],
@@ -40,7 +40,7 @@ export const portfolio = {
     {
       period: "Today",
       title: "Making data useful",
-      body: "I connect governed models and reporting layers to analytics and machine learning workflows—so complex data becomes faster decisions and reliable products.",
+      body: "I connect governed models and reporting layers to analytics and machine learning workflows, turning complex data into faster decisions and reliable products.",
       tags: ["Dimensional models", "Power BI", "ML-ready data", "AI"],
     },
   ],
@@ -163,7 +163,7 @@ export const portfolio = {
       company: "Bright Bee Technology",
       role: "Data Engineer",
       location: "Toronto, Canada",
-      period: "Mar 2024 — Present",
+      period: "Mar 2024 to Present",
       logo: "/assets/images/brightbee.jpeg",
       summary: "Building production data systems across structured and unstructured operational sources.",
       highlights: [
@@ -177,7 +177,7 @@ export const portfolio = {
       company: "Polytechnique Montréal",
       role: "Research Assistant",
       location: "Montréal, Canada",
-      period: "2021 — Sep 2024",
+      period: "2021 to Sep 2024",
       logo: "/assets/images/polymtl.png",
       summary: "Transforming high-volume electrical telemetry into reproducible research and ML-ready datasets.",
       highlights: [
@@ -191,7 +191,7 @@ export const portfolio = {
       company: "Rahbord Hooshmand",
       role: "Engineering Intern",
       location: "Tehran, Iran",
-      period: "Jan 2018 — Dec 2020",
+      period: "Jan 2018 to Dec 2020",
       logo: "/assets/images/rahbordhooshmand.png",
       summary: "Applying analytics and software development to smart-grid and operational data.",
       highlights: [
@@ -206,7 +206,7 @@ export const portfolio = {
     {
       school: "Polytechnique Montréal",
       degree: "M.A.Sc., Electrical Engineering",
-      period: "2021 — 2024",
+      period: "2021 to 2024",
       logo: "/assets/images/polymtl.png",
       body: "Research at the intersection of grid systems, high-volume sensor telemetry, time-series processing, and machine learning.",
       href: "/assets/pdf/on-the-coordination-of-electric-water-heater-loads.pdf",
@@ -214,7 +214,7 @@ export const portfolio = {
     {
       school: "University of Tehran",
       degree: "B.Sc., Electrical Engineering",
-      period: "2016 — 2021",
+      period: "2016 to 2021",
       logo: "/assets/images/UT.png",
       body: "Foundation in signal processing, control systems, numerical methods, circuits, and applied programming.",
     },
