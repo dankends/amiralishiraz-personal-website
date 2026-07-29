@@ -208,7 +208,7 @@ h3 {
 }
 
 .section {
-  padding: clamp(96px, 12vw, 176px) 24px;
+  padding: clamp(88px, 10vw, 144px) 24px;
 }
 
 .section-shell {
@@ -218,7 +218,7 @@ h3 {
 
 .section-heading {
   max-width: 850px;
-  margin-bottom: clamp(52px, 7vw, 92px);
+  margin-bottom: clamp(44px, 6vw, 72px);
 }
 
 .section-heading--center {
@@ -474,7 +474,7 @@ h3 {
 }
 
 .hero-metric {
-  min-height: 150px;
+  min-height: 128px;
   padding: 28px;
   border-right: 1px solid var(--line);
 }
@@ -495,7 +495,7 @@ h3 {
   max-width: 23ch;
   color: var(--muted);
   font-size: 0.82rem;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .story {
@@ -598,12 +598,12 @@ h3 {
 .story-node--4 { bottom: 15%; left: 16%; }
 
 .story-steps {
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
 }
 
 .story-step {
-  min-height: 72vh;
-  padding: 18vh 0 10vh;
+  min-height: 54vh;
+  padding: 13vh 0 8vh;
   border-top: 1px solid var(--line);
   opacity: 0.45;
   transition: opacity 350ms ease;
@@ -629,7 +629,7 @@ h3 {
 
 .story-step h3 {
   max-width: 13ch;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   font: 500 clamp(2.3rem, 4vw, 4rem)/1 "Space Grotesk";
   letter-spacing: -0.055em;
 }
@@ -638,7 +638,7 @@ h3 {
   max-width: 630px;
   color: var(--muted-strong);
   font-size: 1.07rem;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 .tag-list {
@@ -666,7 +666,7 @@ h3 {
 
 .featured-projects {
   display: grid;
-  gap: 130px;
+  gap: 104px;
 }
 
 .project-case {
@@ -674,7 +674,7 @@ h3 {
   grid-template-columns: minmax(0, 0.88fr) minmax(500px, 1.12fr);
   gap: clamp(42px, 8vw, 108px);
   align-items: center;
-  min-height: 78vh;
+  min-height: 68vh;
 }
 
 .project-case:nth-child(even) .project-case__copy {
@@ -682,7 +682,7 @@ h3 {
 }
 
 .project-index {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
   color: #5e7185;
   font: 500 0.75rem "Space Grotesk";
   letter-spacing: 0.14em;
@@ -702,13 +702,15 @@ h3 {
   line-height: 1.68;
 }
 
-.project-facts {
+.project-facts,
+.project-result {
   display: grid;
   gap: 17px;
   margin: 34px 0 0;
 }
 
-.project-facts div {
+.project-facts div,
+.project-result div {
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 20px;
@@ -716,7 +718,8 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
-.project-facts dt {
+.project-facts dt,
+.project-result dt {
   color: var(--muted);
   font-size: 0.7rem;
   font-weight: 600;
@@ -724,11 +727,57 @@ h3 {
   text-transform: uppercase;
 }
 
-.project-facts dd {
+.project-facts dd,
+.project-result dd {
   margin: 0;
   color: var(--muted-strong);
   font-size: 0.86rem;
   line-height: 1.55;
+}
+
+.project-details {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.project-details summary {
+  width: fit-content;
+  padding: 16px 0 2px;
+  color: var(--blue);
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.project-details[open] summary {
+  color: var(--mint);
+}
+
+.project-details .project-facts {
+  margin-top: 10px;
+}
+
+.project-details .tag-list {
+  margin-top: 18px;
+}
+
+.project-toggle {
+  display: block;
+  min-height: 48px;
+  margin: 70px auto 0;
+  padding: 0 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 700 0.78rem "Archivo", sans-serif;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease;
+}
+
+.project-toggle:hover {
+  border-color: var(--mint);
+  color: var(--mint);
 }
 
 .text-link {
@@ -1003,7 +1052,7 @@ h3 {
 .skill-panel {
   position: relative;
   overflow: hidden;
-  min-height: 470px;
+  min-height: 390px;
   padding: clamp(30px, 5vw, 56px);
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -1050,7 +1099,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 38px;
+  margin-top: 28px;
 }
 
 .skill-cloud span {
@@ -1065,7 +1114,7 @@ h3 {
 .skill-flow {
   display: flex;
   align-items: center;
-  margin-top: 52px;
+  margin-top: 38px;
   color: var(--muted);
   font: 600 0.62rem "Space Grotesk";
   letter-spacing: 0.1em;
@@ -1089,7 +1138,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(270px, 0.75fr) minmax(0, 1.25fr);
   gap: clamp(40px, 8vw, 110px);
-  padding: 58px 0;
+  padding: 48px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1138,7 +1187,7 @@ h3 {
 .role-detail ul {
   display: grid;
   gap: 12px;
-  margin: 26px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1175,7 +1224,7 @@ h3 {
 }
 
 .education-card {
-  padding: clamp(28px, 4vw, 46px);
+  padding: clamp(24px, 3vw, 38px);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: linear-gradient(145deg, #111a25, #0b111a);
@@ -1183,7 +1232,7 @@ h3 {
 
 .credential-logo {
   display: grid;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   place-items: center;
 }
 
@@ -1203,11 +1252,6 @@ h3 {
   font-weight: 600;
 }
 
-.education-card > p:last-of-type {
-  color: var(--muted);
-  line-height: 1.65;
-}
-
 .certification-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1219,7 +1263,7 @@ h3 {
   display: grid;
   grid-template-columns: 46px 1fr;
   gap: 16px;
-  padding: 24px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.022);
@@ -1258,7 +1302,7 @@ h3 {
 .award-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 70px;
+  margin-top: 48px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -1267,7 +1311,7 @@ h3 {
   display: grid;
   grid-template-columns: 42px 1fr;
   gap: 14px;
-  min-height: 170px;
+  min-height: 110px;
   padding: 28px;
   border-right: 1px solid var(--line);
 }

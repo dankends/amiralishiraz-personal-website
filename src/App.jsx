@@ -299,7 +299,6 @@ function ProfessionalStory() {
         <SectionHeading
           eyebrow="From signals to systems"
           title="Engineering context became data infrastructure."
-          body="My path from electrical systems and high-volume telemetry to cloud data platforms gives me an end-to-end view of how data is generated, transformed, governed, and used."
         />
         <div className="story-layout">
           <div className="story-sticky">
@@ -317,9 +316,6 @@ function ProfessionalStory() {
                 <p>{item.period}</p>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <div className="tag-list">
-                  {item.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
               </motion.article>
             ))}
           </div>
@@ -362,41 +358,50 @@ function ArchitectureDiagram({ project }) {
 }
 
 function Projects() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll
+    ? portfolio.featuredProjects
+    : portfolio.featuredProjects.slice(0, 3);
+
   return (
     <section className="projects section" id="projects">
       <div className="section-shell">
         <SectionHeading
           eyebrow="Featured systems"
           title="Built around the flow of real data."
-          body="Selected projects that show how I approach ingestion, transformation, data quality, modelling, and analytics delivery."
         />
         <div className="featured-projects">
-          {portfolio.featuredProjects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <article className="project-case" key={project.title}>
               <div className="project-case__copy">
                 <div className="project-index">0{index + 1} / 04</div>
                 <p className="project-type">{project.type}</p>
                 <h3>{project.title}</h3>
                 <p className="project-summary">{project.summary}</p>
-                <dl className="project-facts">
-                  <div>
-                    <dt>Problem</dt>
-                    <dd>{project.problem}</dd>
-                  </div>
-                  <div>
-                    <dt>Engineering focus</dt>
-                    <dd>{project.focus}</dd>
-                  </div>
+                <dl className="project-result">
                   <div>
                     <dt>Result</dt>
                     <dd>{project.result}</dd>
                   </div>
                 </dl>
-                <div className="tag-list">
-                  {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
-                </div>
+                <details className="project-details">
+                  <summary>Project details</summary>
+                  <dl className="project-facts">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>{project.problem}</dd>
+                    </div>
+                    <div>
+                      <dt>Built with</dt>
+                      <dd>{project.focus}</dd>
+                    </div>
+                  </dl>
+                  <div className="tag-list">
+                    {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                </details>
                 <a className="text-link" href={project.href} target="_blank" rel="noreferrer">
-                  Explore repository <ArrowIcon />
+                  View on GitHub <ArrowIcon />
                 </a>
               </div>
               <Reveal className="project-case__visual">
@@ -416,6 +421,14 @@ function Projects() {
             </article>
           ))}
         </div>
+        <button
+          className="project-toggle"
+          type="button"
+          aria-expanded={showAll}
+          onClick={() => setShowAll((value) => !value)}
+        >
+          {showAll ? "Show fewer projects" : "Show all 4 projects"}
+        </button>
 
         <Reveal className="project-archive">
           <div className="archive-heading">
@@ -462,8 +475,7 @@ function SkillEcosystem() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Technical ecosystem"
-          title="Tools organized by responsibility, not popularity."
-          body="A production data platform is a connected system. Explore how I work across ingestion, transformation, governance, analytics, and ML support."
+          title="The tools I use to move data."
         />
         <div className="skills-layout">
           <div className="skill-tabs" role="tablist" aria-label="Technical skill categories">
@@ -496,7 +508,6 @@ function SkillEcosystem() {
               <div>
                 <p className="eyebrow">{category.kicker}</p>
                 <h3>{category.title}</h3>
-                <p>{category.body}</p>
               </div>
               <DatabaseIcon />
             </div>
@@ -528,8 +539,7 @@ function Experience() {
       <div className="section-shell">
         <SectionHeading
           eyebrow="Professional experience"
-          title="A progression from physical systems to scalable data products."
-          body="Concise highlights of the work, technologies, and outcomes that shaped my engineering practice."
+          title="Work measured by outcomes."
         />
         <div className="experience-list">
           {portfolio.experience.map((role, index) => (
@@ -543,7 +553,6 @@ function Experience() {
                 </div>
               </div>
               <div className="role-detail">
-                <p>{role.summary}</p>
                 <ul>
                   {role.highlights.map((highlight) => (
                     <li key={highlight}><CheckIcon /> {highlight}</li>
@@ -577,7 +586,6 @@ function Credentials() {
               <span>{item.period}</span>
               <h3>{item.school}</h3>
               <p className="degree">{item.degree}</p>
-              <p>{item.body}</p>
               {item.href && (
                 <a className="text-link" href={item.href} target="_blank" rel="noreferrer">
                   Read thesis <ArrowIcon />
@@ -593,7 +601,6 @@ function Credentials() {
               <div>
                 <span>{item.issuer} · {item.date}</span>
                 <h3>{item.title}</h3>
-                <p>{item.body}</p>
                 <a href={item.href} target="_blank" rel="noreferrer">
                   View credential <ArrowIcon />
                 </a>
@@ -605,7 +612,7 @@ function Credentials() {
           {portfolio.awards.map((award, index) => (
             <Reveal className="award" key={award.title} delay={index * 0.07}>
               <span>0{index + 1}</span>
-              <div><strong>{award.title}</strong><p>{award.body}</p></div>
+              <div><strong>{award.title}</strong></div>
             </Reveal>
           ))}
         </div>
@@ -623,8 +630,7 @@ function Contact() {
           <p className="eyebrow">Build what comes next</p>
           <h2>Need reliable data behind an ambitious product?</h2>
           <p>
-            I’m open to data engineering opportunities and conversations about pipelines,
-            analytics platforms, cloud infrastructure, and AI-ready data systems.
+            Let’s build data systems people can trust.
           </p>
           <div className="contact-actions">
             <a className="button button--primary" href={`mailto:${portfolio.contact.email}`}>
@@ -643,7 +649,6 @@ function Contact() {
             <img src="/assets/images/headshot.jpg" alt="Amirali D Shiraz" />
             <div><strong>Amirali D Shiraz</strong><span>Data Engineer · Toronto</span></div>
           </div>
-          <div className="contact-status"><i /><span>Available for the right opportunity</span></div>
           <a href={`mailto:${portfolio.contact.email}`}>{portfolio.contact.email}</a>
         </div>
       </div>
