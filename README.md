@@ -1,25 +1,32 @@
-# Amirali D Shiraz Portfolio
+# Amirali D Shiraz — Data Engineering Portfolio
 
-My personal portfolio website, a Data Engineer based in Toronto.
+Personal portfolio for Amirali D Shiraz, a Data Engineer based in Toronto. The
+site presents selected data platforms, professional experience, technical
+skills, education, and credentials through interactive technical storytelling.
 
-## Local preview
-
-This is a static website. From the project folder, run:
+## Run locally
 
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8000` in a browser.
+Open the local address printed by Vite.
 
-## Deployment
+## Production build
 
-The repository is configured for Netlify. Import the repository in Netlify and deploy it with the default settings; the site is published directly from the repository root.
+```bash
+npm run build
+npm run preview
+```
 
-## Structure
+Netlify uses the settings in `netlify.toml` and publishes the generated `dist`
+directory.
 
-- `index.html` — portfolio homepage
-- `data-engineering.html`, `data-science.html`, `electrical-engineering.html` — focused portfolio pages
-- `targeted-resume.html` — targeted resume page
-- `styles.css` — site styles
-- `assets/` — images, certificates, and résumé PDFs
+## Project structure
+
+- `src/App.jsx` — page sections and interaction structure
+- `src/portfolio-data.js` — verified portfolio content
+- `src/icons.jsx` — interface icon components
+- `src/styles.css` — responsive design system
+- `public/assets/` — images, résumé, thesis, and certificate PDFs
