@@ -327,17 +327,21 @@ h3 {
   margin: 0 auto;
 }
 
-.availability {
+.hero-identity {
   display: inline-flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 52px;
-  color: var(--muted-strong);
-  font-size: 0.78rem;
-  letter-spacing: 0.03em;
+  color: var(--ink);
+  font: 600 0.82rem/1.2 "Space Grotesk", sans-serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.availability span,
+.hero-identity span {
+  color: var(--mint);
+}
+
 .contact-status i,
 .pipeline-status i {
   width: 7px;
@@ -1592,7 +1596,7 @@ footer {
     padding-top: 118px;
   }
 
-  .availability {
+  .hero-identity {
     margin-bottom: 36px;
     font-size: 0.68rem;
   }

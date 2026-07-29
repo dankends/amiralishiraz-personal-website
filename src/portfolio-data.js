@@ -13,7 +13,7 @@ export const portfolio = {
     linkedin: "https://www.linkedin.com/in/amiralishiraz/",
   },
   metrics: [
-    { value: "140K+", label: "IoT sensors transformed into ML-ready time-series data" },
+    { value: "500+ TB", label: "Cumulative data processed across production pipelines" },
     { value: "60%", label: "Reduction in inconsistent records through validation" },
     { value: "45%", label: "Faster Power BI queries from optimized reporting layers" },
     { value: "30%", label: "Less manual data preparation through automation" },

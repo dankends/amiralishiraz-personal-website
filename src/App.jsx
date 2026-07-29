@@ -207,8 +207,8 @@ function Hero() {
           }}
         >
           {[
-            <div className="availability" key="availability">
-              <span /> Toronto, Canada · Open to data opportunities
+            <div className="hero-identity" key="identity">
+              Amirali D Shiraz <span>·</span> Toronto, Canada
             </div>,
             <p className="hero-kicker" key="kicker">Data Engineer</p>,
             <h1 key="title">
